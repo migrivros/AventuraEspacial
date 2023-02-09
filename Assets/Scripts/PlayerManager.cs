@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
     public static bool isGameOver;
     public GameObject gameOverScreen;
+    public GameObject pauseMenu;
 
     public static Vector2 lastCheckPoint = new Vector2(-239, 1);
 
@@ -31,6 +33,23 @@ public class PlayerManager : MonoBehaviour
             gameOverScreen.SetActive(true);
         }
         
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        pauseMenu.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 }
