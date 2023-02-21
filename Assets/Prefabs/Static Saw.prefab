@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8367210887321167948}
   - component: {fileID: 5616522373857980451}
   - component: {fileID: 4829372862640901475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Static Saw
   m_TagString: Trap
   m_Icon: {fileID: 0}

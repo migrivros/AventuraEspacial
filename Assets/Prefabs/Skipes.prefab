@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 147310266761190364}
   - component: {fileID: 147310266761190365}
   - component: {fileID: 147310266761190363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Skipes
   m_TagString: Trap
   m_Icon: {fileID: 0}
