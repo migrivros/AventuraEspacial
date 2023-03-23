@@ -8,9 +8,13 @@ public class PlayerShoot : MonoBehaviour
     PlayerControls controls;
     public Animator animator;
 
+    [SerializeField] private AudioSource shootSound;
+
     public GameObject bullet;
     public Transform bulletHole;
     public float velocity = 200;
+
+   
 
     private void Awake()
     {
@@ -25,6 +29,7 @@ public class PlayerShoot : MonoBehaviour
     {
         animator.SetTrigger("shoot");
         GameObject go = Instantiate(bullet, bulletHole.position, bullet.transform.rotation);
+        shootSound.Play();
         if(GetComponent<PlayerMovement>().facingDirectionRight)
         {
             go.GetComponent<Rigidbody2D>().AddForce(Vector2.right * velocity);

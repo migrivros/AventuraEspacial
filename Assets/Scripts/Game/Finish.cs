@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
+    public GameObject levelFinishMenu;
 
     private AudioSource finishSound;
 
@@ -22,15 +23,9 @@ public class Finish : MonoBehaviour
         {
             finishSound.Play();
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            levelFinishMenu.SetActive(true);
             levelComplete = true;
-            Invoke("CompleteLevel", 2f);
+            
         }
-    }
-
-    private void CompleteLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    
+    } 
 }

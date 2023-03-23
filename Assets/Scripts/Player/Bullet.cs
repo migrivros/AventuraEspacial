@@ -13,10 +13,20 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if(collision.tag == "Enemy")
+        if(collision.tag == "WeakEnemy")
         {
             Destroy(gameObject);
-            collision.GetComponent<AngryPig>().TakeDamage(damage);
+            collision.GetComponent<WeakEnemy>().TakeDamage(damage);
+        }
+        if(collision.tag == "MediumEnemy")
+        {
+            Destroy(gameObject);
+            collision.GetComponent<MediumEnemy>().TakeDamage(damage);
+        }
+        if(collision.tag == "KnightBoss")
+        {
+            Destroy(gameObject);
+            collision.GetComponent<KnightBoss>().TakeDamage(damage);
         }
     }
 }

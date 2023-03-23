@@ -10,6 +10,7 @@ public class PlayerLife : MonoBehaviour
     public GameObject gameOverScreen;
 
     [SerializeField] private AudioSource deathSoundEffect;
+    [SerializeField] private AudioSource damageSoundEffect;
 
     // Start is called before the first frame update
     private void Start()
@@ -20,7 +21,8 @@ public class PlayerLife : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("WeakEnemy") || collision.gameObject.CompareTag("MediumEnemy")
+            || collision.gameObject.CompareTag("KnightBoss"))
         {
             HealthManager.playerHealth--;
             if(HealthManager.playerHealth <= 0)
@@ -31,6 +33,7 @@ public class PlayerLife : MonoBehaviour
             }
             else
             {
+                damageSoundEffect.Play();
                 StartCoroutine(GetHurt());
             }
             

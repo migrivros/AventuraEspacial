@@ -18,8 +18,10 @@ public class PlayerMovement : MonoBehaviour
         [SerializeField] private float jumpForce = 15f;
 
         private bool isGrounded;
+        private bool isGrounded2;
 
         [SerializeField] private LayerMask jumpableGround;
+        [SerializeField] private LayerMask jumpableGround2;
 
         [SerializeField] private AudioSource jumpSoundEffect;
 
@@ -46,7 +48,20 @@ public class PlayerMovement : MonoBehaviour
         private void Update()
         {
             isGrounded = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, jumpableGround);  //Comprueba que la caja que encierra al personaje entra en contacto con la capa "jumpableGround" desde abajo a una distancia  de .1f
-            animator.SetBool("isGrounded", isGrounded);
+            isGrounded2 = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, jumpableGround2);
+            if(isGrounded == true)
+            {
+                animator.SetBool("isGrounded", isGrounded);
+            }
+            if(isGrounded2 == true)
+            {
+                animator.SetBool("isGrounded", isGrounded2);
+            }
+            else
+            {
+                animator.SetBool("isGrounded", isGrounded);
+            }
+            
             if(!(rb.bodyType == RigidbodyType2D.Static))
             {
                 rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
@@ -67,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         private void Jump()
         {
-            if(isGrounded)
+            if(isGrounded || isGrounded2)
             {
                 if (gameObject != null)
                 {   

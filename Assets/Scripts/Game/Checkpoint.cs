@@ -6,9 +6,12 @@ public class Checkpoint : MonoBehaviour
 {
     private Animator animator;
 
+    private AudioSource checkpointSound;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
+        checkpointSound = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +19,7 @@ public class Checkpoint : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             PlayerManager.lastCheckPoint = transform.position;
+            checkpointSound.Play();
             animator.SetInteger("state", 1);
         }
     }

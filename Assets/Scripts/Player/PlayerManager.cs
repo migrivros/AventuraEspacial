@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public static bool isGameOver;
     public GameObject gameOverScreen;
     public GameObject pauseMenu;
+    public GameObject finishLevelMenu;
 
     public static Vector2 lastCheckPoint = new Vector2(-239, 1);
 
@@ -50,6 +51,11 @@ public class PlayerManager : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
