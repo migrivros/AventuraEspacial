@@ -38,6 +38,18 @@ public class PlayerLife : MonoBehaviour
             }
             
         }
+        if(collision.gameObject.CompareTag("LetalTrap"))
+        {
+            HealthManager.playerHealth = HealthManager.playerHealth - 3;
+            damageSoundEffect.Play();
+            if(HealthManager.playerHealth <= 0)
+            {
+                PlayerManager.isGameOver = true;
+                gameOverScreen.SetActive(false);
+                Die();
+            }
+            
+        }
     }
 
     IEnumerator GetHurt()

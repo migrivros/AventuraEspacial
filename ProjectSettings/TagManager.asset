@@ -10,6 +10,7 @@ TagManager:
   - WeakEnemy
   - MediumEnemy
   - KnightBoss
+  - LetalTrap
   layers:
   - Default
   - TransparentFX
