@@ -21,6 +21,7 @@ public class WeakEnemy : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         initScale = transform.localScale.x;
+        enemyLife = 100;
         //Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 

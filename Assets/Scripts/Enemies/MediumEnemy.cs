@@ -21,6 +21,7 @@ public class MediumEnemy : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         initScale = transform.localScale.x;
+        enemyLife = 250;
         //Physics2D.IgnoreCollision(target.GetComponent<Collider2D>(), GetComponent<Collider2D>());
     }
 
@@ -51,6 +52,7 @@ public class MediumEnemy : MonoBehaviour
             deathSoundEffect.Play();
             animator.SetTrigger("death"); 
             GetComponent<CapsuleCollider2D>().enabled = false;
+            enemyLife = 250;
             //this.enabled = false;
         }
     }

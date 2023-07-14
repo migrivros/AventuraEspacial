@@ -12,6 +12,12 @@ TagManager:
   - KnightBoss
   - LetalTrap
   - NinjaBoss
+  - Apple
+  - Orange
+  - Melon
+  - Coin
+  - StrongEnemy
+  - WitchBoss
   layers:
   - Default
   - TransparentFX

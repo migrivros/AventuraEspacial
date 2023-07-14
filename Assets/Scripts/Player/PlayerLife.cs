@@ -22,7 +22,8 @@ public class PlayerLife : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Trap") || collision.gameObject.CompareTag("WeakEnemy") || collision.gameObject.CompareTag("MediumEnemy")
-            || collision.gameObject.CompareTag("KnightBoss") || collision.gameObject.CompareTag("NinjaBoss"))
+            || collision.gameObject.CompareTag("StrongEnemy") || collision.gameObject.CompareTag("KnightBoss") || collision.gameObject.CompareTag("NinjaBoss")
+            || collision.gameObject.CompareTag("WitchBoss"))
         {
             HealthManager.playerHealth--;
             if(HealthManager.playerHealth <= 0)

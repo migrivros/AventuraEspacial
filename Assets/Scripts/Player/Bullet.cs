@@ -23,6 +23,11 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             collision.GetComponent<MediumEnemy>().TakeDamage(damage);
         }
+        if(collision.tag == "StrongEnemy")
+        {
+            Destroy(gameObject);
+            collision.GetComponent<StrongEnemy>().TakeDamage(damage);
+        }
         if(collision.tag == "KnightBoss")
         {
             Destroy(gameObject);
@@ -32,6 +37,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
             collision.GetComponent<NinjaBoss>().TakeDamage(damage);
+        }
+        if(collision.tag == "WitchBoss")
+        {
+            Destroy(gameObject);
+            collision.GetComponent<WitchBoss>().TakeDamage(damage);
         }
     }
 }
