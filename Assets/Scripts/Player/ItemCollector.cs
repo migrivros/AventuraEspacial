@@ -6,13 +6,19 @@ using UnityEngine.UI;
 public class ItemCollector : MonoBehaviour
 {
 
-    private int cherries = 0;
-    private int oranges = 0;
-    private int apples = 0;
-    private int melons = 0;
-    private int coins = 0;
+    public static int cherries = 0;
+    public static int oranges = 0;
+    public static int apples = 0;
+    public static int melons = 0;
+    public static int coins = 0;
+    public static int gasolines = 0;
 
-    [SerializeField] private Text cherriesText;
+    [SerializeField] private Text cherryText;
+    [SerializeField] private Text orangeText;
+    [SerializeField] private Text appleText;
+    [SerializeField] private Text melonText;
+    [SerializeField] private Text coinText;
+    [SerializeField] private Text gasolineText;
 
     [SerializeField] private AudioSource collectSoundEffect;
 
@@ -24,7 +30,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             cherries++;
 
-            cherriesText.text = "Cerezas: " + cherries;
+            cherryText.text = "Obtener cerezas: " + cherries + "/3";
         }
         if(collision.gameObject.CompareTag("Orange"))
         {
@@ -32,7 +38,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             oranges++;
 
-            //cherriesText.text = "Naranjas: " + oranges;
+            orangeText.text = "Obtener naranjas: " + oranges + "/3";
         }
         if(collision.gameObject.CompareTag("Melon"))
         {
@@ -40,7 +46,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             melons++;
 
-            //cherriesText.text = "Melones: " + melons;
+            //melonText.text = "Melones: " + melons;
         }
         if(collision.gameObject.CompareTag("Apple"))
         {
@@ -48,16 +54,23 @@ public class ItemCollector : MonoBehaviour
             Destroy(collision.gameObject);
             apples++;
 
-            //cherriesText.text = "Manzanas: " + apples;
+            appleText.text = "Obtener manzanas: " + apples + "/3";
         }
         if(collision.gameObject.CompareTag("Coin"))
         {
             collectSoundEffect.Play();
             Destroy(collision.gameObject);
             coins++;
-
-            //cherriesText.text = "Monedas: " + coins;
+            
+            coinText.text = "Obtener monedas: " + coins + "/3";
         }
-
+        if(collision.gameObject.CompareTag("Gasoline"))
+        {
+            collectSoundEffect.Play();
+            Destroy(collision.gameObject);
+            gasolines++;
+            
+            gasolineText.text = "Obtener combustible: " + gasolines + "/3";
+        }
     }
 }

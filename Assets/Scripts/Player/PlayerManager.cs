@@ -9,6 +9,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject pauseMenu;
     public GameObject finishLevelMenu;
+    public GameObject notCompleteQuestScreen;
+
 
     public static Vector2 lastCheckPoint = new Vector2(-239, 1);
 
@@ -51,11 +53,19 @@ public class PlayerManager : MonoBehaviour
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
+        PlayerManager.lastCheckPoint = new Vector2(-239, 1);
     }
 
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerManager.lastCheckPoint = new Vector2(-239, 1);
+    }
+
+    public void AcceptMenu()
+    {
+        Time.timeScale = 1;
+        notCompleteQuestScreen.SetActive(false);
     }
 
 }

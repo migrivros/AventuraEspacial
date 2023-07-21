@@ -18,6 +18,7 @@ TagManager:
   - Coin
   - StrongEnemy
   - WitchBoss
+  - Gasoline
   layers:
   - Default
   - TransparentFX

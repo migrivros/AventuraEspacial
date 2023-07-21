@@ -10,7 +10,8 @@ public class HealthCollect : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Cherry"))
+        if(collision.gameObject.CompareTag("Cherry") || collision.gameObject.CompareTag("Orange")
+        || collision.gameObject.CompareTag("Apple") || collision.gameObject.CompareTag("Melon"))
         {
             collectSoundEffect.Play();
             Destroy(collision.gameObject);
