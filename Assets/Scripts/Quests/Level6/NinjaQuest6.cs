@@ -14,8 +14,15 @@ public class NinjaQuest6 : MonoBehaviour
 
     void Start()
     {
-        complete = false;
         enemyBossLife = 1000;
+    }
+
+    private void Update()
+    {
+        if (complete == true)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +37,6 @@ public class NinjaQuest6 : MonoBehaviour
     {
         questItem.color = completedColor;
         complete = true;
-        FinishCondition3.CheckQuests();
+        FinishCondition6.CheckQuests();
     }
 }

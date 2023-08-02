@@ -14,8 +14,15 @@ public class KnightQuest3 : MonoBehaviour
 
     void Start()
     {
-        complete = false;
         enemyBossLife = 750;
+    }
+
+    private void Update()
+    {
+        if (complete == true)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

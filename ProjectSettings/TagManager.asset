@@ -19,6 +19,10 @@ TagManager:
   - StrongEnemy
   - WitchBoss
   - Gasoline
+  - Map
+  - Trunk
+  - Bullet
+  - Key
   layers:
   - Default
   - TransparentFX

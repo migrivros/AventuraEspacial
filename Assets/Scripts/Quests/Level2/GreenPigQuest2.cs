@@ -15,7 +15,14 @@ public class GreenPigQuest2 : MonoBehaviour
     void Start()
     {
         enemyLife = 100;
-        complete = false;
+    }
+
+    private void Update()
+    {
+        if (complete == true)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

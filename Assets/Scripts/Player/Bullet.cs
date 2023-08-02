@@ -23,6 +23,11 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             collision.GetComponent<MediumEnemy>().TakeDamage(damage);
         }
+        if(collision.tag == "Trunk")
+        {
+            Destroy(gameObject);
+            collision.GetComponent<TrunkMediumEnemy>().TakeDamage(damage);
+        }
         if(collision.tag == "StrongEnemy")
         {
             Destroy(gameObject);

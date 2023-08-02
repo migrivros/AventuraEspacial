@@ -21,7 +21,7 @@ public class EnemyShooting : MonoBehaviour
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if(distance < 10 && MediumEnemy.enemyLife > 0 && HealthManager.playerHealth > 0)
+        if(distance < 10 && TrunkMediumEnemy.trunkLife > 0 && HealthManager.playerHealth > 0)
         {
             timer += Time.deltaTime;
 

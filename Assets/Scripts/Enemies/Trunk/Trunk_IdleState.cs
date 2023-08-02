@@ -12,7 +12,7 @@ public class Trunk_IdleState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        borderCheck = animator.GetComponent<MediumEnemy>().borderCheck;
+        borderCheck = animator.GetComponent<TrunkMediumEnemy>().borderCheck;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

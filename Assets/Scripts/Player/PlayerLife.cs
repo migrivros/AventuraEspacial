@@ -71,6 +71,27 @@ public class PlayerLife : MonoBehaviour
 
     public void RestartLevel()
     {
+        ItemCollector.cherries = Checkpoint.savedCherries;
+        ItemCollector.oranges = Checkpoint.savedOranges;
+        ItemCollector.apples = Checkpoint.savedApples;
+        ItemCollector.melons = Checkpoint.savedMelons;
+        ItemCollector.coins = Checkpoint.savedCoins;
+        ItemCollector.gasolines = Checkpoint.savedgGasolines;
+        ItemCollector.maps = Checkpoint.savedMaps;
+        ItemCollector.keys = Checkpoint.savedKeys;
+
+        if(PlayerManager.lastCheckPoint == new Vector2(-239, 1))
+        {
+            GreenPigQuest2.complete = false;
+            BatQuest3.complete = false;
+            KnightQuest3.complete = false;
+            RhinoQuest5.complete = false;
+            GhostQuest6.complete = false;
+            NinjaQuest6.complete = false;
+            TrunkQuest7.complete = false;
+            WitchQuest9.complete = false;
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

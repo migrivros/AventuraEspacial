@@ -15,7 +15,14 @@ public class GhostQuest6 : MonoBehaviour
     void Start()
     {
         enemyLife = 500;
-        complete = false;
+    }
+
+    private void Update()
+    {
+        if (complete == true)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

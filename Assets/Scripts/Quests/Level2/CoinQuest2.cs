@@ -14,7 +14,14 @@ public class CoinQuest2 : MonoBehaviour
     void Start()
     {
         complete = false;
-        ItemCollector.coins = 0;
+    }
+
+    private void Update()
+    {
+        if (ItemCollector.coins == 1)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

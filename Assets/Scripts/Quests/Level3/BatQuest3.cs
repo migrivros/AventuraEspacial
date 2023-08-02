@@ -15,7 +15,6 @@ public class BatQuest3 : MonoBehaviour
     void Start()
     {
         enemyLife = 100;
-        complete = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
