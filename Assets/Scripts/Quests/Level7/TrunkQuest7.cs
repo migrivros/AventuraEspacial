@@ -29,8 +29,8 @@ public class TrunkQuest7 : MonoBehaviour
     {
         if(collision.tag == "Bullet")
         {
-            trunkLife = trunkLife - 50;
-            if(trunkLife == 0){
+            trunkLife = trunkLife - Bullet.damage;
+            if(trunkLife <= 0){
                 FinishQuest();
             }
         } 

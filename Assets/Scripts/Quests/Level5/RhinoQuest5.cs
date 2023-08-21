@@ -27,8 +27,8 @@ public class RhinoQuest5 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyLife = enemyLife - 50;
-        if(enemyLife == 0){
+        enemyLife = enemyLife - Bullet.damage;
+        if(enemyLife <= 0){
             FinishQuest();
         }
     }

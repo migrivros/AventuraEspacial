@@ -8,7 +8,7 @@ public class WitchQuest9 : MonoBehaviour
 {
     public Text questItem;
     public Color completedColor;
-    public static int enemyBossLife = 1500;
+    public static int enemyBossLife = 4000;
 
     public static bool complete = false;
 
@@ -27,8 +27,8 @@ public class WitchQuest9 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyBossLife = enemyBossLife - 50;
-        if(enemyBossLife == 0){
+        enemyBossLife = enemyBossLife - Bullet.damage;
+        if(enemyBossLife <= 0){
             FinishQuest();
         }
     }

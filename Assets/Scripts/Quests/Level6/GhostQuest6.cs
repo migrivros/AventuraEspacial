@@ -12,6 +12,8 @@ public class GhostQuest6 : MonoBehaviour
 
     public static bool complete = false;
 
+    public GameObject capabilityUpgradeAdvise;
+
     void Start()
     {
         enemyLife = 500;
@@ -27,8 +29,13 @@ public class GhostQuest6 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyLife = enemyLife - 50;
-        if(enemyLife == 0){
+        enemyLife = enemyLife - Bullet.damage;
+        if(enemyLife <= 0){
+            if(complete == false)
+            {
+                Bullet.damage = 100;
+                capabilityUpgradeAdvise.SetActive(true);
+            }
             FinishQuest();
         }
     }

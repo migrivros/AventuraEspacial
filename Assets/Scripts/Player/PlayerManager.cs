@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject finishLevelMenu;
     public GameObject notCompleteQuestScreen;
+    public GameObject capabilityUpgradeAdvise;
 
 
     public static Vector2 lastCheckPoint = new Vector2(-239, 1);
@@ -77,6 +78,12 @@ public class PlayerManager : MonoBehaviour
         notCompleteQuestScreen.SetActive(false);
     }
 
+    public void AcceptCapabilitiesMenu()
+    {
+        Time.timeScale = 1;
+        capabilityUpgradeAdvise.SetActive(false);
+    }
+
     public static void cleanData()
     {
         ItemCollector.cherries = 0;
@@ -96,6 +103,10 @@ public class PlayerManager : MonoBehaviour
         NinjaQuest6.complete = false;
         TrunkQuest7.complete = false;
         WitchQuest9.complete = false;
+
+        Bullet.damage = 50;
+
+        Dialogue.startedLevel = false;
     }
 
 }

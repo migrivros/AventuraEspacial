@@ -9,6 +9,8 @@ public class KeysQuest9 : MonoBehaviour
     public Text questItem;
     public Color completedColor;
 
+    public GameObject capabilityUpgradeAdvise;
+
     public static bool complete = false;
 
     void Start()
@@ -20,6 +22,11 @@ public class KeysQuest9 : MonoBehaviour
     {
         if(ItemCollector.keys == 3)
         {
+            if(complete == false)
+            {
+                Bullet.damage = 100;
+                capabilityUpgradeAdvise.SetActive(true);
+            }
             FinishQuest();
         }
     }

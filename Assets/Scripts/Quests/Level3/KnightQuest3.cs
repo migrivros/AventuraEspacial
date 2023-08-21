@@ -8,7 +8,7 @@ public class KnightQuest3 : MonoBehaviour
 {
     public Text questItem;
     public Color completedColor;
-    public static int enemyBossLife = 750;
+    public static int enemyBossLife = 1250;
 
     public static bool complete = false;
 
@@ -27,8 +27,8 @@ public class KnightQuest3 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyBossLife = enemyBossLife - 50;
-        if(enemyBossLife == 0){
+        enemyBossLife = enemyBossLife - Bullet.damage;
+        if(enemyBossLife <= 0){
             FinishQuest();
         }
     }

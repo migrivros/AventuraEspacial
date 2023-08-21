@@ -90,6 +90,9 @@ public class PlayerLife : MonoBehaviour
             NinjaQuest6.complete = false;
             TrunkQuest7.complete = false;
             WitchQuest9.complete = false;
+
+            Bullet.damage = 50;
+            Dialogue.startedLevel = false;
         }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

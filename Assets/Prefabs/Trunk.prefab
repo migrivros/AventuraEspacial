@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 2734529488530594357}
   - component: {fileID: 2734529488530594358}
   - component: {fileID: 2734529488530594359}
-  - component: {fileID: 2734529488530594345}
   - component: {fileID: 2734529488530594353}
   m_Layer: 8
   m_Name: Trunk
@@ -366,20 +365,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2874262643445561936, guid: 85d8b86ffd02b4526a128555c5adc66f, type: 3}
   bulletPosition: {fileID: 2734529488492597155}
---- !u!114 &2734529488530594345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2734529488530594346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb9d33872c6e4af382f08933cd93fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questItem: {fileID: 0}
-  completedColor: {r: 0.08627451, g: 0.38431373, b: 0.08627451, a: 1}
 --- !u!114 &2734529488530594353
 MonoBehaviour:
   m_ObjectHideFlags: 0
