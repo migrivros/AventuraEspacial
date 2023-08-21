@@ -14,7 +14,6 @@ public class OrangeQuest2 : MonoBehaviour
     void Start()
     {
         complete = false;
-        ItemCollector.oranges = 0;
     }
 
     private void Update()

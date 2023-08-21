@@ -8,7 +8,7 @@ public class KnightBoss : MonoBehaviour
 
     Transform target;
     float initScale;
-    public static int enemyLife = 750;
+    public static int enemyLife = 1250;
     public Slider healthBar;
     public GameObject healthBarObject;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    public int damage = 50;
+    public static int damage = 50;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,6 +22,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
             collision.GetComponent<MediumEnemy>().TakeDamage(damage);
+        }
+        if(collision.tag == "Trunk")
+        {
+            Destroy(gameObject);
+            collision.GetComponent<TrunkMediumEnemy>().TakeDamage(damage);
         }
         if(collision.tag == "StrongEnemy")
         {

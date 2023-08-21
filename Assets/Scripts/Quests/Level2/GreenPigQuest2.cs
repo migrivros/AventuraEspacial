@@ -15,13 +15,20 @@ public class GreenPigQuest2 : MonoBehaviour
     void Start()
     {
         enemyLife = 100;
-        complete = false;
+    }
+
+    private void Update()
+    {
+        if (complete == true)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyLife = enemyLife - 50;
-        if(enemyLife == 0){
+        enemyLife = enemyLife - Bullet.damage;
+        if(enemyLife <= 0){
             FinishQuest();
         }
     }

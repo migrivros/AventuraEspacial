@@ -8,7 +8,7 @@ public class NinjaBoss : MonoBehaviour
 
     Transform target;
     float initScale;
-    public static int enemyLife = 1000;
+    public static int enemyLife = 2500;
     public Slider healthBar;
     public GameObject healthBarObject;
 

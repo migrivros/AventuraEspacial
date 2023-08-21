@@ -8,7 +8,7 @@ public class WitchBoss : MonoBehaviour
 
     Transform target;
     float initScale;
-    public static int enemyLife = 1500;
+    public static int enemyLife = 4000;
     public Slider healthBar;
     public GameObject healthBarObject;
 

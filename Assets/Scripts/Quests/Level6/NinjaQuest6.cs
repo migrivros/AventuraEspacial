@@ -8,20 +8,27 @@ public class NinjaQuest6 : MonoBehaviour
 {
     public Text questItem;
     public Color completedColor;
-    public static int enemyBossLife = 1000;
+    public static int enemyBossLife = 2500;
 
     public static bool complete = false;
 
     void Start()
     {
-        complete = false;
         enemyBossLife = 1000;
+    }
+
+    private void Update()
+    {
+        if (complete == true)
+        {
+            FinishQuest();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyBossLife = enemyBossLife - 50;
-        if(enemyBossLife == 0){
+        enemyBossLife = enemyBossLife - Bullet.damage;
+        if(enemyBossLife <= 0){
             FinishQuest();
         }
     }
@@ -30,6 +37,6 @@ public class NinjaQuest6 : MonoBehaviour
     {
         questItem.color = completedColor;
         complete = true;
-        FinishCondition3.CheckQuests();
+        FinishCondition6.CheckQuests();
     }
 }

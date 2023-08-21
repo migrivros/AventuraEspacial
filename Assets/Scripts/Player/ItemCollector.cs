@@ -12,6 +12,8 @@ public class ItemCollector : MonoBehaviour
     public static int melons = 0;
     public static int coins = 0;
     public static int gasolines = 0;
+    public static int maps = 0;
+    public static int keys = 0;
 
     [SerializeField] private Text cherryText;
     [SerializeField] private Text orangeText;
@@ -19,6 +21,8 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] private Text melonText;
     [SerializeField] private Text coinText;
     [SerializeField] private Text gasolineText;
+    [SerializeField] private Text mapText;
+    [SerializeField] private Text keyText;
 
     [SerializeField] private AudioSource collectSoundEffect;
 
@@ -71,6 +75,22 @@ public class ItemCollector : MonoBehaviour
             gasolines++;
             
             gasolineText.text = "Obtener combustible: " + gasolines + "/3";
+        }
+        if(collision.gameObject.CompareTag("Map"))
+        {
+            collectSoundEffect.Play();
+            Destroy(collision.gameObject);
+            maps++;
+            
+            mapText.text = "Encontrar mapas: " + maps + "/3";
+        }
+        if(collision.gameObject.CompareTag("Key"))
+        {
+            collectSoundEffect.Play();
+            Destroy(collision.gameObject);
+            keys++;
+            
+            keyText.text = "Conseguir llaves: " + keys + "/3";
         }
     }
 }

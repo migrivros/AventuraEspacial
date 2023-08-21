@@ -11,14 +11,17 @@ public class CherryQuest : MonoBehaviour
 
     public static bool complete = false;
 
+    [SerializeField] private Text cherryText;
+
     void Start()
     {
         complete = false;
-        ItemCollector.cherries = 0;
     }
 
     private void Update()
     {
+        cherryText.text = "Obtener cerezas: " + ItemCollector.cherries + "/3";
+
         if (ItemCollector.cherries == 3)
         {
             FinishQuest();
