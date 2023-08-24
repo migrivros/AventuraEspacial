@@ -22,7 +22,7 @@ public class KnightBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyLife = 750;
+        enemyLife = 1250;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         initScale = transform.localScale.x;
         healthBar.value = enemyLife;

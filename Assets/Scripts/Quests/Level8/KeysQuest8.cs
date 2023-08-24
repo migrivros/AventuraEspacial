@@ -9,6 +9,8 @@ public class KeysQuest8 : MonoBehaviour
     public Text questItem;
     public Color completedColor;
 
+    [SerializeField] private Text keysText;
+
     public static bool complete = false;
 
     void Start()
@@ -18,6 +20,8 @@ public class KeysQuest8 : MonoBehaviour
 
     private void Update()
     {
+        keysText.text = "Conseguir llaves: " + ItemCollector.keys + "/3";
+
         if(ItemCollector.keys == 3)
         {
             FinishQuest();

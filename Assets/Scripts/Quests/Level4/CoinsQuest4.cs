@@ -11,6 +11,8 @@ public class CoinsQuest4 : MonoBehaviour
 
     public static bool complete = false;
 
+    [SerializeField] private Text coinsText;
+
     void Start()
     {
         complete = false;
@@ -18,6 +20,8 @@ public class CoinsQuest4 : MonoBehaviour
 
     private void Update()
     {
+        coinsText.text = "Obtener monedas: " + ItemCollector.coins + "/3";
+        
         if (ItemCollector.coins == 3)
         {
             FinishQuest();

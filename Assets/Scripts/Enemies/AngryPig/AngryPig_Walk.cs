@@ -5,7 +5,7 @@ using UnityEngine;
 public class AngryPig_Walk : StateMachineBehaviour
 {
     Transform target;
-    public float speed = 2;
+    public float speed = 3;
 
     Transform borderCheck;
 
@@ -29,13 +29,13 @@ public class AngryPig_Walk : StateMachineBehaviour
 
         float distance = Vector2.Distance(target.position, animator.transform.position);
 
-        if(distance < 3)
+        if(distance < 5)
         {
             animator.SetBool("isNear", false);
             animator.SetBool("isNearToAtack", true);
         }
 
-        if(distance > 7)
+        if(distance > 10)
         {
             animator.SetBool("isNear", false);
         }
