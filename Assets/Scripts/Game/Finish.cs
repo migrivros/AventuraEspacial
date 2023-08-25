@@ -28,7 +28,10 @@ public class Finish : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             levelFinishMenu.SetActive(true);
             levelComplete = true;
-            PlayerPrefs.SetInt("LevelPassed", SceneManager.GetActiveScene().buildIndex);
+            if(MenuEvents.levelPassed < SceneManager.GetActiveScene().buildIndex)
+            {
+                PlayerPrefs.SetInt("LevelPassed", SceneManager.GetActiveScene().buildIndex);
+            }
         }
         else if(collision.gameObject.name == "Player" && !questsComplete)
         {

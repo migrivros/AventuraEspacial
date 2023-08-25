@@ -16,7 +16,7 @@ public class MenuEvents : MonoBehaviour
     private float valueSFX;
 
     public Button level1, level2, level3, level4, level5, level6, level7, level8, level9;
-    int levelPassed;
+    public static int levelPassed;
 
 
     private void Start()
@@ -79,7 +79,7 @@ public class MenuEvents : MonoBehaviour
                 level7.interactable = true;
                 level8.interactable = true;
                 break;
-            case 9:
+            case 8:
                 level2.interactable = true;
                 level3.interactable = true;
                 level4.interactable = true;
