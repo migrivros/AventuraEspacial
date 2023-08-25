@@ -29,7 +29,7 @@ public class AngryPig_Run : StateMachineBehaviour
 
         float distance = Vector2.Distance(target.position, animator.transform.position);
 
-        if(distance > 3)
+        if(distance > 5)
         {
             animator.SetBool("isNearToAtack", false);
             animator.SetBool("isNear", true);

@@ -9,6 +9,8 @@ public class MapsQuest8 : MonoBehaviour
     public Text questItem;
     public Color completedColor;
 
+    [SerializeField] private Text mapsText;
+
     public static bool complete = false;
 
     void Start()
@@ -18,6 +20,8 @@ public class MapsQuest8 : MonoBehaviour
 
     private void Update()
     {
+        mapsText.text = "Encontrar mapas: " + ItemCollector.maps + "/3";
+
         if(ItemCollector.maps == 3)
         {
             FinishQuest();

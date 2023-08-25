@@ -11,6 +11,8 @@ public class OrangeQuest2 : MonoBehaviour
 
     public static bool complete = false;
 
+    [SerializeField] private Text orangeText;
+
     void Start()
     {
         complete = false;
@@ -18,6 +20,8 @@ public class OrangeQuest2 : MonoBehaviour
 
     private void Update()
     {
+        orangeText.text = "Obtener naranjas: " + ItemCollector.oranges + "/3";
+
         if (ItemCollector.oranges == 3)
         {
             FinishQuest();

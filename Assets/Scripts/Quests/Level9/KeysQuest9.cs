@@ -11,6 +11,8 @@ public class KeysQuest9 : MonoBehaviour
 
     public GameObject capabilityUpgradeAdvise;
 
+    [SerializeField] private Text keysText;
+
     public static bool complete = false;
 
     void Start()
@@ -20,6 +22,8 @@ public class KeysQuest9 : MonoBehaviour
 
     private void Update()
     {
+        keysText.text = "Conseguir llaves: " + ItemCollector.keys + "/3";
+
         if(ItemCollector.keys == 3)
         {
             if(complete == false)

@@ -26,7 +26,7 @@ public class AngryPig_IdleState : StateMachineBehaviour
 
         float distance = Vector2.Distance(target.position, animator.transform.position);
 
-        if(distance < 7)
+        if(distance < 10)
         {
             animator.SetBool("isNear", true);
         }

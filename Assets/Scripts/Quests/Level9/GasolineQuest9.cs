@@ -8,6 +8,8 @@ public class GasolineQuest9 : MonoBehaviour
 {
     public Text questItem;
     public Color completedColor;
+    
+    [SerializeField] private Text gasolineText;
 
     public static bool complete = false;
 
@@ -18,6 +20,8 @@ public class GasolineQuest9 : MonoBehaviour
 
     private void Update()
     {
+        gasolineText.text = "Obtener combustible: " + ItemCollector.gasolines + "/3";
+
         if(ItemCollector.gasolines == 3)
         {
             FinishQuest();

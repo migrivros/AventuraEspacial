@@ -22,7 +22,7 @@ public class WitchBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyLife = 1500;
+        enemyLife = 4000;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         initScale = transform.localScale.x;
         healthBar.value = enemyLife;

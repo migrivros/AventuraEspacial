@@ -22,7 +22,7 @@ public class NinjaBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyLife = 1000;
+        enemyLife = 2500;
         target = GameObject.FindGameObjectWithTag("Player").transform;
         initScale = transform.localScale.x;
         healthBar.value = enemyLife;

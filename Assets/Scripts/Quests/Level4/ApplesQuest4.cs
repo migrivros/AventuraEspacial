@@ -9,6 +9,8 @@ public class ApplesQuest4 : MonoBehaviour
     public Text questItem;
     public Color completedColor;
 
+    [SerializeField] private Text applesText;
+
     public static bool complete = false;
 
     void Start()
@@ -18,6 +20,8 @@ public class ApplesQuest4 : MonoBehaviour
 
     private void Update()
     {
+        applesText.text = "Obtener manzanas: " + ItemCollector.apples + "/3";
+
         if (ItemCollector.apples == 3)
         {
             FinishQuest();
