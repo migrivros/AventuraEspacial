@@ -6,6 +6,23 @@ TagManager:
   tags:
   - Cherry
   - Trap
+  - Terrain
+  - WeakEnemy
+  - MediumEnemy
+  - KnightBoss
+  - LetalTrap
+  - NinjaBoss
+  - Apple
+  - Orange
+  - Melon
+  - Coin
+  - StrongEnemy
+  - WitchBoss
+  - Gasoline
+  - Map
+  - Trunk
+  - Bullet
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -13,9 +30,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Player
   - Ground
-  - 
-  - 
+  - Traps
   - 
   - 
   - 
