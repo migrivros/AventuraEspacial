@@ -26,6 +26,7 @@ public class MenuEvents : MonoBehaviour
         volumeSliderSFX.value = PlayerPrefs.GetFloat("volumeSFX", valueSFX);
 
         levelPassed = PlayerPrefs.GetInt("LevelPassed");
+        
         level2.interactable = false;
         level3.interactable = false;
         level4.interactable = false;
@@ -34,6 +35,7 @@ public class MenuEvents : MonoBehaviour
         level7.interactable = false;
         level8.interactable = false;
         level9.interactable = false;
+        
 
         switch (levelPassed)
         {
