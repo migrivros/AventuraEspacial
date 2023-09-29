@@ -14,7 +14,7 @@ public class NinjaQuest6 : MonoBehaviour
 
     void Start()
     {
-        enemyBossLife = 1000;
+        enemyBossLife = 2500;
     }
 
     private void Update()
