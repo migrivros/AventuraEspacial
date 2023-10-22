@@ -14,7 +14,7 @@ public class WitchQuest9 : MonoBehaviour
 
     void Start()
     {
-        enemyBossLife = 1500;
+        enemyBossLife = 4000;
     }
 
     private void Update()

@@ -14,7 +14,7 @@ public class KnightQuest3 : MonoBehaviour
 
     void Start()
     {
-        enemyBossLife = 750;
+        enemyBossLife = 1250;
     }
 
     private void Update()
